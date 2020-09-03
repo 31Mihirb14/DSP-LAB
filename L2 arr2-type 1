@@ -1,0 +1,18 @@
+# coping a array in reverse order by slicing negative index
+
+arrx = [1,5,3,6,9,4,7];
+arry = [None] * len(arrx);
+
+for i in range(0, len(arrx)):
+   arry[i] = arrx[i] ;
+print("element of original array")
+print(arrx)
+
+print("element of new array")
+print(arry[::-1])
+
+output---
+element of original array
+[1, 5, 3, 6, 9, 4, 7]
+element of new array
+[7, 4, 9, 6, 3, 5, 1]
