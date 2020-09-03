@@ -1,0 +1,17 @@
+# coping using def function
+# using function
+
+def coping(arr1):
+    arr2=arr1[:]
+    return arr2
+#main code 
+#intializing array 1
+arr1 = [4,2,3,6,9,5]
+arr2 = coping(arr1)
+print("orizinal",arr1)
+print("after coping",arr2)
+
+output---
+
+orizinal [4, 2, 3, 6, 9, 5]
+after coping [4, 2, 3, 6, 9, 5]
