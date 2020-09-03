@@ -1,0 +1,16 @@
+# using function and slicing
+
+def coping(arr1):
+    arr2=arr1[::-1]
+    return arr2
+#main code 
+#intializing array 1
+arr1 = [5,2,3,6,9,4,6]
+arr2 = coping(arr1)
+print("original",arr1)
+print("after coping",arr2)
+
+
+output---
+original [5, 2, 3, 6, 9, 4, 6]
+after coping [6, 4, 9, 6, 3, 2, 5]
