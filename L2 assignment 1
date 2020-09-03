@@ -1,0 +1,21 @@
+# concatinate array
+arr1 = [1,2,3,6,5,4]
+print("array 1 ",arr1)
+arr2 = [1,2,5,6,4,8,3,1]
+print("array 2 ",arr2)
+#concatinate array 1 and array 2
+arr3=arr1+arr2
+print("after concatinate",arr3)
+# removing duplicate
+x=[]
+for i in arr3 :
+ if i not in x :
+  x.append(i)
+print("after removing",x) 
+
+
+output=--
+array 1  [1, 2, 3, 6, 5, 4]
+array 2  [1, 2, 5, 6, 4, 8, 3, 1]
+after concatinate [1, 2, 3, 6, 5, 4, 1, 2, 5, 6, 4, 8, 3, 1]
+after removing [1, 2, 3, 6, 5, 4, 8]
