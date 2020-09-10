@@ -1,0 +1,57 @@
+# taking input
+rows= int(input("Enter Number of rows"))
+col= int(input("Enter number of  columns"))
+matrix=[]
+for i in range (rows):
+    c=[]
+    for j in range(col):
+        j=int(input("Enter Number in matrix"+str(i)+" "+str(j)+" "))
+        c.append(j)
+    print()
+    matrix.append(c)
+for i in range (rows):
+    for j in range (col):
+        print (matrix [i][j],end="")
+        print()
+
+thres=1
+for i in range(len(matrix)):
+    for j in range(len(matrix[0])):
+        if matrix[i][j] <thres+1:
+            matrix[i][j]=0
+sparseMatrix = []
+for i in range(len(matrix)):
+    for j in range(len(matrix[0])):
+        if matrix[i][j] != 0:
+            temp = [i, j, matrix[i][j]]
+            sparseMatrix.append(temp)
+print(sparseMatrix)
+
+
+
+
+output--
+Enter Number of rows3
+Enter number of  columns3
+Enter Number in matrix0 0 1
+Enter Number in matrix0 1 2
+Enter Number in matrix0 2 3
+
+Enter Number in matrix1 0 0
+Enter Number in matrix1 1 0
+Enter Number in matrix1 2 2
+
+Enter Number in matrix2 0 0
+Enter Number in matrix2 1 0
+Enter Number in matrix2 2 3
+
+1
+2
+3
+0
+0
+2
+0
+0
+3
+[[0, 1, 2], [0, 2, 3], [1, 2, 2], [2, 2, 3]]
