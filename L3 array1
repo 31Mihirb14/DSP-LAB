@@ -1,0 +1,68 @@
+# lab 3 
+
+# sparse matrix
+
+matrix = [[1,0,0,0],
+          [0,2,0,0],
+          [0,0,3,0],
+          [0,0,0,4]]
+for row in matrix :
+    for element in row:
+        print(element , end = " ")
+        print("\n")
+        
+# convert matrix in sparse
+spmatrix = [] #sparse matrix initializing to zero
+for i in range(len(matrix)):
+    for j in range(len(matrix)):
+        if matrix[i][j] != 0 :
+            temp = [0]
+            #append values to temp 
+            temp.append(i)
+            temp.append(j)
+            temp.append(matrix[i][j])
+            
+            # now append sub list into sparse list 
+            spmatrix.append(temp)
+           
+                        
+    
+            print(" sparse matrix : ",spmatrix)
+        
+        output---
+        1 
+
+0 
+
+0 
+
+0 
+
+0 
+
+2 
+
+0 
+
+0 
+
+0 
+
+0 
+
+3 
+
+0 
+
+0 
+
+0 
+
+0 
+
+4 
+
+ sparse matrix :  [[0, 0, 0, 1]]
+ sparse matrix :  [[0, 0, 0, 1], [0, 1, 1, 2]]
+ sparse matrix :  [[0, 0, 0, 1], [0, 1, 1, 2], [0, 2, 2, 3]]
+ sparse matrix :  [[0, 0, 0, 1], [0, 1, 1, 2], [0, 2, 2, 3], [0, 3, 3, 4]]
