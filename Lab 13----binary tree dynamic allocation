@@ -1,0 +1,54 @@
+class node:
+    def __init__(self,data=None):
+        self.data=data
+        self.left_node=None
+        self.right_node=None
+class BinaryTree:
+    def __init__(self):
+        self.root=None
+
+    def inorder(self):
+        if(self.root==None):
+            print("Tree is Empty.....")
+        else:
+            self._inorder(self.root)
+
+    def _inorder(self,current):
+        if current:
+            print(current.data, end="")
+            self._inorder(current.left_node)
+            self._inorder(current.right_node)
+
+
+ob1=BinaryTree()
+first=node(10)
+second=node(9)
+third=node(11)
+forth=node(8)
+fifth=node(12)
+sixth=node(7)
+seventh=node(15)
+eight=node(14)
+ninth=node(19)
+tenth=node(16)
+eleventh=node(21)
+twelth=node(22)
+ob1.root=first
+first.left_node=second
+first.right_node=third
+second.left_node=forth
+second.right_node=fifth
+third.left_node=sixth
+third.right_node=seventh
+forth.left_node=eight
+forth.right_node=ninth
+fifth.left_node=tenth
+fifth.right_node=eleventh
+print("inorder is",end=" ")
+ob1.inorder()
+
+
+
+output----
+inorder is 10 9 8 14 19 12 16 21 11 7 15
+
